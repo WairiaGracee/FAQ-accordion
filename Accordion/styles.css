@@ -1,0 +1,257 @@
+body {
+    font-family: "Roboto Condensed", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    background-image: url(images/freepik__adjust__28699.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq-wrapper {
+    box-shadow: -2px 5px 7px -1px rgba(0, 0, 0, 0.75);
+    height: 84vh;
+    width: 85vw;
+    background: 
+        url(images/9170924.jpg) no-repeat top,
+        linear-gradient(to bottom, #9b2593 40%, #c4b5c3);
+    background-size: 100% 30%, 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-accordion{
+    height: 500px;
+    width: 550px;
+    padding: 20px 15px;
+    background-color: #d8e4f0;
+    box-shadow: -2px 5px 7px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-accordion h1{
+    margin:15px 0 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 40px;
+    color: #3b2739;
+}
+
+
+.faq-accordion .accordion-wrap{
+    width: 100%;
+    height: 80%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    height: 90%; 
+    margin: 0;
+    padding: 0;
+}
+
+.accordion li{
+    flex: 1;
+    list-style: none;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background:#e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255,255, 0.7);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 19px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    border: 1px solid #3b2739;
+    background-color: #3b2739;
+    color: #ffffff;
+    transition: transform 0.3s; 
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 19px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 200px;
+}
+
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+    transform: rotate(180deg);
+}
+
+
+@media (max-width: 480px) {
+    .faq-accordion {
+        height: 80%;
+        width: 76%; 
+        padding: 15px; 
+        overflow: hidden;
+    }
+
+    .accordion-wrap {
+        height: 100%;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .accordion-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .faq-accordion h1 {
+        font-size: 28px;
+    }
+
+    .accordion li {
+        padding: 10px 5px;
+    }
+
+    label::before {
+        font-size: 20px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .faq-accordion {
+        height: 85%;
+        width: 80%;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .accordion-wrap {
+        height: 100%; 
+        overflow-y: scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+
+    .accordion-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .faq-accordion h1 {
+        font-size: 32px; 
+    }
+
+    .accordion li {
+        padding: 15px 10px; 
+    }
+
+    label::before {
+        font-size: 22px; 
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .faq-accordion {
+        height: 80%;
+        width: 70%;
+        padding: 25px;
+        overflow: hidden;
+    }
+    
+
+    .faq-accordion h1 {
+        font-size: 36px; 
+    }
+
+    .accordion-wrap {
+        height: 100%; 
+        overflow-y: scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+
+    .accordion-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .accordion li {
+        padding: 20px 15px; 
+    }
+
+    label::before {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+    .faq-accordion {
+        height: 77%;
+        width: 60%;
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    .faq-accordion h1 {
+        font-size: 40px;
+    }
+
+    .accordion li {
+        padding: 25px 20px;
+    }
+
+    
+    .accordion-wrap {
+        height: 100%; 
+        overflow-y: scroll;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+    }
+
+    .accordion-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    label::before {
+        font-size: 28px; 
+    }
+}
+
